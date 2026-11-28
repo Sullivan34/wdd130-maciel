@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blox-Plays | Accessories</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Ubuntu:wght@400;500&display=swap');
+
+        body {
+            margin: 0;
+            background-color: #0F0A00;
+            color: white;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        
+        .site-header {
+            background-color: #43298E;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 30px;
+            min-height: 75px;
+        }
+
+        .logo img {
+            width: 95px;
+            height: 95px;
+            object-fit: contain;
+        }
+
+        .site-header nav {
+            display: flex;
+            gap: 60px;
+        }
+
+        .site-header nav a {
+            color: #0F0A00;
+            text-decoration: none;
+            font-family: 'Outfit', sans-serif;
+            font-size: 16px;
+        }
+
+
+        .header-name {
+            color: #0F0A00;
+            font-family: 'Outfit', sans-serif;
+            font-weight: bold;
+        }
+
+
+        h1, h2, h3 {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        nav {
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #0F0A00;
+            text-decoration: none;
+            margin: 20px;
+            font-weight: bold;
+        }
+
+
+        .site-header nav a {
+            color: #0F0A00;
+            text-decoration: none;
+            font-family: 'Outfit', sans-serif;
+            font-size: 16px;
+
+            border: 2px solid #43298E;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #F6EB4F;
+            transition: 0.3s;
+        }
+
+        .site-header nav a:hover {
+            background-color: #00ADEB;
+            color: white;
+        }
+
+
+        main {
+            padding: 30px;
+        }
+
+
+        .product {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        .product-image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .product-info {
+            background-color: #43298E;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .product-info p {
+            line-height: 1.6;
+        }
+
+        .sizes button {
+            background-color: #00ADEB;
+            border: none;
+            padding: 12px 20px;
+            margin: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .cart {
+            background-color: #F6EB4F;
+            color: #0F0A00;
+            padding: 15px 25px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+
+        .more-products {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 40px;
+            max-width: 1000px;
+            margin: 60px auto;
+        }
+
+        .product-box {
+            background-color: #43298E;
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            border: 3px solid #00ADEB;
+            border-radius: 10px;
+        }
+
+        .product-slider {
+            display: grid;
+            grid-template-columns: auto 1fr 1fr auto;
+            gap: 25px;
+            align-items: center;
+            max-width: 1100px;
+            margin: 50px auto;
+        }
+
+        .product-image img {
+            width: 100%;
+            max-width: 400px;
+            height: 350px;
+            object-fit: contain;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .product-info {
+            background-color: #43298E;
+            padding: 30px;
+            border-radius: 10px;
+            min-width: 250px;
+        }
+
+        .slider-button {
+            background-color: #F6EB4F;
+            color: #0F0A00;
+            border: none;
+            padding: 15px;
+            font-size: 22px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+
+        .product-box img {
+            width: 250px;
+            height: 200px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+
+
+        footer {
+            background-color: #43298E;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 50px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin: 0;
+        }
+
+        .footer-links a {
+            color: #F6EB4F;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: #00ADEB;
+            text-decoration: underline;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+        .footer-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        max-width: 1100px;
+        margin: auto;
+        text-align: center;
+        }
+
+        .footer-brand {
+            text-align: left;
+        }
+
+        .footer-links {
+            text-align: center;
+        }
+
+        .social-links {
+            text-align: right;
+            align-items: flex-end;
+        }
+
+        .footer-brand,
+        .footer-links,
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-links a,
+        .social-links a {
+            color: #F6EB4F;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover,
+        .social-links a:hover {
+            color: #00ADEB;
+            text-decoration: underline;
+        }
+
+        .footer-content h3 {
+            margin-bottom: 5px;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+
+    
+<header class="site-header">
+
+    <div class="logo">
+        <img src="images/logo.png" alt="Blox-Plays Logo">
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="accessories.html">Accessories</a>
+        <a href="clothing.html">Clothing</a>
+    </nav>
+
+    <div class="header-name">
+        <p>Blox-Plays</p>
+    </div>
+
+</header>
+
+
+    <main>
+
+       
+        
+        <section class="product-slider">
+            <button class="slider-button" onclick="changeProduct(-1)">&#10094;</button>
+
+            <div class="product-image">
+                <img id="product-picture" src="images/accessory1.jpg" alt="Blox-Plays product">
+            </div>
+
+            <div class="product-info">
+                <h2 id="product-name">Blox-Plays Accessories</h2>
+                <p id="product-description">
+                    Show your support for Blox-Plays with our awesome collection of merchandise!
+                </p>
+                <h3 id="product-price">Price: $15.00</h3>
+                <button class="cart">Add to Cart</button>
+            </div>
+
+            <button class="slider-button" onclick="changeProduct(1)">&#10095;</button>
+        </section>
+
+
+
+        <section class="more-products">
+
+            <div class="product-box">
+                <h2>Featured Accessory</h2>
+                <img src="images/bandana.png.png" alt="Blox-Plays Bandana">
+                <p>More Blox-Plays merchandise coming soon!</p>
+            </div>
+
+            <div class="product-box">
+                <h2>More Merchandise</h2>
+                <img src="images/Blox Plays Cosmic Merch Collection.png" alt="Merch Collection">
+                <p>Check out our other accessories and collectibles!</p>
+            </div>
+
+        </section>
+
+
+        
+    </main>
+
+   
+    <footer>
+        <div class="footer-content">
+
+            <div class="footer-brand">
+                <h2>Blox-Plays</h2>
+                <p>&copy; 2026 Blox-Plays. All rights reserved.</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Navigation</h3>
+                <a href="index.html">Home</a>
+                <a href="accessories.html">Accessories</a>
+                <a href="clothing.html">Clothing</a>
+            </div>
+
+            <div class="social-links">
+                <h3>Socials</h3>
+                <a href="https://www.youtube.com/" target="_blank">YouTube</a>
+                <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+                <a href="https://www.tiktok.com/" target="_blank">TikTok</a>
+            </div>
+
+        </div>
+    </footer>
+
+
+<script>
+    const products = [
+        {
+            name: "Blox-Plays Accessories",
+            description: "Show your support for Blox-Plays with our awesome collection of merchandise!",
+            price: "Price: $15.00",
+            image: "images/bandana.png.png"
+        },
+        {
+            name: "Blox-Plays Key Ring",
+            description: "Be Stylish while representing your favorite channel!",
+            price: "Price: $25.00",
+            image: "images/key_ring.png.png"
+        },
+        {
+            name: "Blox-Plays Hat",
+            description: "Rep Blox-Plays with this awesome Hat",
+            price: "Price: $20.00",
+            image: "images/hat.png.png"
+        }
+    ];
+
+    let currentProduct = 0;
+
+    function changeProduct(direction) {
+        currentProduct += direction;
+
+        if (currentProduct >= products.length) {
+            currentProduct = 0;
+        }
+
+        if (currentProduct < 0) {
+            currentProduct = products.length - 1;
+        }
+
+        document.getElementById("product-name").textContent = products[currentProduct].name;
+        document.getElementById("product-description").textContent = products[currentProduct].description;
+        document.getElementById("product-price").textContent = products[currentProduct].price;
+        document.getElementById("product-picture").src = products[currentProduct].image;
+    }
+</script>
+</body>
+</html>
+
+
+</body>
+</html>
